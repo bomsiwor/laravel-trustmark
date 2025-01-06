@@ -1,0 +1,49 @@
+{
+  "name": "bomsiwor/laravel-trustmark",
+  "description": "Laravel Trustmark",
+  "version": "0.1.0",
+  "type": "library",
+  "require-dev": {
+    "orchestra/testbench": "^7.0",
+    "laravel/pint": "^1.18",
+    "pestphp/pest": "^1.23"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bomsiwor\\LaravelTrustmark\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "bomsiwor",
+      "email": "bomsiwor@gmail.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Bomsiwor\\LaravelTrustmark\\ServiceProvider"
+      ],
+      "aliases": {
+        "VClaim": "Bomsiwor\\LaravelTrustmark\\Facades\\VClaim"
+      }
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": false,
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "lint": "pint -v",
+    "test:lint": "pint --test -v",
+    "test:unit": "pest --colors=always"
+  },
+  "require": {
+    "bomsiwor/php-trustmark": "^0.1.0"
+  }
+}
