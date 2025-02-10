@@ -32,6 +32,12 @@
       }
     }
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../php-trustmark"
+    }
+  ],
   "config": {
     "allow-plugins": {
       "php-http/discovery": false,

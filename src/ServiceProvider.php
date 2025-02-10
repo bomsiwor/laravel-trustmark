@@ -22,6 +22,17 @@ final class ServiceProvider extends BaseServiceProvider
                 env: config('trustmark.env'),
             );
         });
+
+        // Bind service provider
+        $this->app->bind('antrean', function () {
+            return Trustmark::client(
+                consId: config('trustmark.consId'),
+                secretKey: config('trustmark.secretKey'),
+                userKey: config('trustmark.userKey'),
+                service: 'antrean',
+                env: config('trustmark.env'),
+            );
+        });
     }
 
     public function boot()
